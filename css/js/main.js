@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('sumar').addEventListener('click', sumar);
     document.getElementById('restar').addEventListener('click', restar);
-    // Descomenta las siguientes líneas para agregar multiplicación y división
-    // document.getElementById('multiplicar').addEventListener('click', multiplicar);
-    // document.getElementById('dividir').addEventListener('click', dividir);
+    document.getElementById('multiplicar').addEventListener('click', multiplicar);
+    document.getElementById('dividir').addEventListener('click', dividir);
 });
 
 function obtenerNumeros() {
@@ -36,8 +35,6 @@ function restar() {
     }
 }
 
-// Descomenta las siguientes funciones para agregar multiplicación y división
-/*
 function multiplicar() {
     const { numero1, numero2 } = obtenerNumeros();
     if (!isNaN(numero1) && !isNaN(numero2)) {
@@ -61,4 +58,3 @@ function dividir() {
         mostrarResultado('Por favor, introduce números válidos.');
     }
 }
-*/

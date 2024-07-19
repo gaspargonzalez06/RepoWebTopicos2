@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+    commands:
+      - echo Installing source NPM dependencies...
+      - npm install
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm run build # Suponiendo que tienes un script de construcción en tu package.json
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: yes
+  base-directory: build # Asumiendo que tu directorio de salida de construcción es "build"
+  name: website.zip
+cache:
+  paths:
+    - 'node_modules/**/*'

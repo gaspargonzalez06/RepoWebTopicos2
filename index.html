@@ -4,26 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Página Web</title>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>¡Bienvenidos a mi página web!</h1>
-    <p>Esta es una página web estática creada para despliegue en AWS.</p>
-    <p>Regino pro.</p>
+    <div class="container mt-5">
+        <h1 class="text-center">¡Bienvenidos a mi página web!</h1>
+        <p class="text-center">Esta es una página web estática creada para despliegue en AWS.</p>
+        <p class="text-center">Regino pro.</p>
 
-    <h2>Calculadora</h2>
-    <form id="calculadora">
-        <input type="number" id="numero1" placeholder="Número 1">
-        <input type="number" id="numero2" placeholder="Número 2">
-        <br>
-        <button type="button" onclick="sumar()">Sumar</button>
-        <button type="button" onclick="restar()">Restar</button>
-        <!-- Descomenta las siguientes líneas para agregar multiplicación y división -->
-        <!-- <button type="button" onclick="multiplicar()">Multiplicar</button> -->
-        <!-- <button type="button" onclick="dividir()">Dividir</button> -->
-    </form>
-    <p id="resultado">Resultado: </p>
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <h2 class="text-center">Calculadora</h2>
+                <form id="calculadora" class="form-inline justify-content-center">
+                    <div class="form-group mx-2">
+                        <input type="number" class="form-control" id="numero1" placeholder="Número 1">
+                    </div>
+                    <div class="form-group mx-2">
+                        <input type="number" class="form-control" id="numero2" placeholder="Número 2">
+                    </div>
+                    <div class="form-group mx-2">
+                        <button type="button" class="btn btn-primary" id="sumar">Sumar</button>
+                    </div>
+                    <div class="form-group mx-2">
+                        <button type="button" class="btn btn-danger" id="restar">Restar</button>
+                    </div>
+                    <!-- Descomenta las siguientes líneas para agregar multiplicación y división -->
+                    <!-- <div class="form-group mx-2"> -->
+                    <!--     <button type="button" class="btn btn-success" id="multiplicar">Multiplicar</button> -->
+                    <!-- </div> -->
+                    <!-- <div class="form-group mx-2"> -->
+                    <!--     <button type="button" class="btn btn-warning" id="dividir">Dividir</button> -->
+                    <!-- </div> -->
+                </form>
+                <p id="resultado" class="text-center mt-3 font-weight-bold">Resultado: </p>
+            </div>
+        </div>
+    </div>
 
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

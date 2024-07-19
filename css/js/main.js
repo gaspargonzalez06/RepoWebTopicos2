@@ -1,3 +1,11 @@
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('sumar').addEventListener('click', sumar);
+    document.getElementById('restar').addEventListener('click', restar);
+    // Descomenta las siguientes líneas para agregar multiplicación y división
+    // document.getElementById('multiplicar').addEventListener('click', multiplicar);
+    // document.getElementById('dividir').addEventListener('click', dividir);
+});
+
 function obtenerNumeros() {
     const numero1 = parseFloat(document.getElementById("numero1").value);
     const numero2 = parseFloat(document.getElementById("numero2").value);

@@ -1,4 +1,3 @@
-
 function obtenerNumeros() {
     const numero1 = parseFloat(document.getElementById("numero1").value);
     const numero2 = parseFloat(document.getElementById("numero2").value);
@@ -11,31 +10,47 @@ function mostrarResultado(resultado) {
 
 function sumar() {
     const { numero1, numero2 } = obtenerNumeros();
-    const resultado = numero1 + numero2;
-    mostrarResultado(resultado);
+    if (!isNaN(numero1) && !isNaN(numero2)) {
+        const resultado = numero1 + numero2;
+        mostrarResultado(resultado);
+    } else {
+        mostrarResultado('Por favor, introduce números válidos.');
+    }
 }
 
 function restar() {
     const { numero1, numero2 } = obtenerNumeros();
-    const resultado = numero1 - numero2;
-    mostrarResultado(resultado);
+    if (!isNaN(numero1) && !isNaN(numero2)) {
+        const resultado = numero1 - numero2;
+        mostrarResultado(resultado);
+    } else {
+        mostrarResultado('Por favor, introduce números válidos.');
+    }
 }
 
 // Descomenta las siguientes funciones para agregar multiplicación y división
 /*
 function multiplicar() {
     const { numero1, numero2 } = obtenerNumeros();
-    const resultado = numero1 * numero2;
-    mostrarResultado(resultado);
+    if (!isNaN(numero1) && !isNaN(numero2)) {
+        const resultado = numero1 * numero2;
+        mostrarResultado(resultado);
+    } else {
+        mostrarResultado('Por favor, introduce números válidos.');
+    }
 }
 
 function dividir() {
     const { numero1, numero2 } = obtenerNumeros();
-    if (numero2 === 0) {
-        mostrarResultado("Error: División por cero");
+    if (!isNaN(numero1) && !isNaN(numero2)) {
+        if (numero2 === 0) {
+            mostrarResultado("Error: División por cero");
+        } else {
+            const resultado = numero1 / numero2;
+            mostrarResultado(resultado);
+        }
     } else {
-        const resultado = numero1 / numero2;
-        mostrarResultado(resultado);
+        mostrarResultado('Por favor, introduce números válidos.');
     }
 }
 */
